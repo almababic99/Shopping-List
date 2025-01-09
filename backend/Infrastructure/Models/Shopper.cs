@@ -10,6 +10,7 @@ namespace Infrastructure.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Item> ShoppingList { get; set; } = new List<Item>();
+
+        // public List<Item> ShoppingList { get; set; } = new List<Item>();
     }
 }

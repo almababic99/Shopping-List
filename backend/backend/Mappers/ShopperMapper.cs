@@ -4,7 +4,7 @@ using Infrastructure.Models;
 
 namespace API.Mappers
 {
-    public class ShopperMapper
+    public static class ShopperMapper
     {
         public static ShopperDTO MapToDTO(Shopper shopper)
         {
@@ -19,12 +19,3 @@ namespace API.Mappers
 
 
 
-//// Map ShopperDTO to ShopperDomain (API Layer to Domain Layer)
-//public static ShopperDomain MapToDomain(ShopperDTO shopperDTO)
-//{
-//    return new ShopperDomain
-//    {
-//        Id = shopperDTO.Id,
-//        Name = shopperDTO.Name
-//    };
-//}

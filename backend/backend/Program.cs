@@ -13,11 +13,24 @@ builder.Services.AddScoped<IShopperRepository, ShopperRepository>();
 builder.Services.AddScoped<IShopperService, ShopperService>();
 
 builder.Services.AddControllers();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")   // Allow requests from Angular frontend
+              .AllowAnyMethod()                       // Allow all HTTP methods (GET, POST, etc.)
+              .AllowAnyHeader();                     // Allow all headers
+    });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowLocalhost");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

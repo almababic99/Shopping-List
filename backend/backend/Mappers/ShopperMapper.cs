@@ -1,5 +1,4 @@
 ﻿using Application.DTOModels;
-using Domain.DomainModels;
 using Infrastructure.Models;
 
 namespace API.Mappers

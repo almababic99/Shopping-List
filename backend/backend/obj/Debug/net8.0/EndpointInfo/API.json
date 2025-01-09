@@ -4,6 +4,19 @@
     "title": "API",
     "version": "1.0"
   },
-  "paths": { },
+  "paths": {
+    "/api/Shopper": {
+      "get": {
+        "tags": [
+          "Shopper"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
   "components": { }
 }

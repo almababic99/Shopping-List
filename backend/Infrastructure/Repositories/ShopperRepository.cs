@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Repositories;
+using Domain.DomainModels;
 using Infrastructure.Data;
 using Infrastructure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class ShopperRepository : IShopperRepository
+    public class ShopperRepository : IShopperRepository  // ShopperRepository class implements IShopperRepository interface
     {
         private readonly ShoppingListDbContext _shoppingListDbContext;
         public ShopperRepository(ShoppingListDbContext shoppingListDbContext) 
@@ -16,9 +14,9 @@ namespace Infrastructure.Repositories
             _shoppingListDbContext = shoppingListDbContext;
         }
 
-        public IEnumerable<Shopper> GetShoppers()
+        public async Task<IEnumerable<Shopper>> GetShoppers()
         {
-            return _shoppingListDbContext.Shoppers.ToList();
+            return await _shoppingListDbContext.Shoppers.ToListAsync();
         }
     }
 }

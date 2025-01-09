@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Boundaries")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59612c753ae73d6be3782abf8039668d1e450483")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+263b26796c0f49fe3857ccf51261983fb3292eb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Boundaries")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Boundaries")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

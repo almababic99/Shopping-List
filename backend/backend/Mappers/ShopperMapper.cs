@@ -1,28 +1,30 @@
-﻿using API.DTOModels;
+﻿using Application.DTOModels;
 using Domain.DomainModels;
+using Infrastructure.Models;
 
 namespace API.Mappers
 {
-    public static class ShopperMapper
+    public class ShopperMapper
     {
-        // Map ShopperDTO to ShopperDomain (API Layer to Domain Layer)
-        public static ShopperDomain MapToDomain(ShopperDTO shopperDTO)
-        {
-            return new ShopperDomain
-            {
-                Id = shopperDTO.Id,
-                Name = shopperDTO.Name
-            };
-        }
-
-        // Map ShopperDomain to ShopperDTO (Domain Layer to API Layer)
-        public static ShopperDTO MapToDTO(ShopperDomain shopperDomain)
+        public static ShopperDTO MapToDTO(Shopper shopper)
         {
             return new ShopperDTO
             {
-                Id = shopperDomain.Id,
-                Name = shopperDomain.Name
+                Id = shopper.Id,
+                Name = shopper.Name
             };
         }
     }
 }
+
+
+
+//// Map ShopperDTO to ShopperDomain (API Layer to Domain Layer)
+//public static ShopperDomain MapToDomain(ShopperDTO shopperDTO)
+//{
+//    return new ShopperDomain
+//    {
+//        Id = shopperDTO.Id,
+//        Name = shopperDTO.Name
+//    };
+//}

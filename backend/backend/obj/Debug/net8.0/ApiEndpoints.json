@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "API.Controllers.ShopperController",
+    "Method": "Get",
+    "RelativePath": "api/Shopper",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

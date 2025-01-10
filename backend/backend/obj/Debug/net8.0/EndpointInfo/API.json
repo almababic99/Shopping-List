@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Item": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Shopper": {
       "get": {
         "tags": [

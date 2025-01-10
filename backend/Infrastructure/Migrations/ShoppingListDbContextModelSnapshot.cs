@@ -21,6 +21,50 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ShopperId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShopperId");
+
+                    b.ToTable("ShoppingLists");
+                });
+
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShoppingListId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("ShoppingListId");
+
+                    b.ToTable("ShoppingListItems");
+                });
+
             modelBuilder.Entity("Infrastructure.Models.Item", b =>
                 {
                     b.Property<int>("Id")
@@ -33,15 +77,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ShopperId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ShopperId");
 
                     b.ToTable("Items");
                 });
@@ -63,16 +99,41 @@ namespace Infrastructure.Migrations
                     b.ToTable("Shoppers");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Item", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
                 {
                     b.HasOne("Infrastructure.Models.Shopper", null)
-                        .WithMany("ShoppingList")
+                        .WithMany("ShoppingLists")
                         .HasForeignKey("ShopperId");
+                });
+
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItem", b =>
+                {
+                    b.HasOne("Infrastructure.Models.Item", null)
+                        .WithMany("ShoppingLists")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Infrastructure.EntityModels.ShoppingList", null)
+                        .WithMany("Items")
+                        .HasForeignKey("ShoppingListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+                {
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.Item", b =>
+                {
+                    b.Navigation("ShoppingLists");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Shopper", b =>
                 {
-                    b.Navigation("ShoppingList");
+                    b.Navigation("ShoppingLists");
                 });
 #pragma warning restore 612, 618
         }

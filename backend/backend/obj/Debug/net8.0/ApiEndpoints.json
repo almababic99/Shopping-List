@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "API.Controllers.ItemController",
+    "Method": "Get",
+    "RelativePath": "api/Item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.ShopperController",
     "Method": "Get",
     "RelativePath": "api/Shopper",

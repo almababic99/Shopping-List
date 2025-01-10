@@ -8,6 +8,6 @@
 
         public int Quantity { get; set; }
 
-        public int? ShopperId { get; set; }
+        public List<ShoppingListItemDomain> ShoppingLists { get; set; } = new List<ShoppingListItemDomain>();  // Item can be in multiple shopping lists
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
 using API.Mappers;
-using Domain.DomainModels;
 
 namespace API.Controllers
 {

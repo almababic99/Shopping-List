@@ -7,17 +7,19 @@ using Application.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ShoppingListDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IShopperRepository, ShopperRepository>();
-builder.Services.AddScoped<IShopperService, ShopperService>();
+builder.Services.AddDbContext<ShoppingListDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));   // This is registering the ShoppingListDbContext
+builder.Services.AddScoped<IShopperRepository, ShopperRepository>();  // This registers the ShopperRepository as a scoped service that implements the IShopperRepository interface.
+builder.Services.AddScoped<IShopperService, ShopperService>();        // This registers the ShopperService as a scoped service that implements the IShopperService interface.
+builder.Services.AddScoped<IItemRepository, ItemRepository>();        // This registers the ItemRepository as a scoped service that implements the IItemRepository interface.
+builder.Services.AddScoped<IItemService, ItemService>();              // This registers the ItemService as a scoped service that implements the IItemService interface.
 
 builder.Services.AddControllers();
 
-builder.Services.AddCors(options =>
+builder.Services.AddCors(options =>    // Adding Cors to the application
 {
     options.AddPolicy("AllowLocalhost", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")   // Allow requests from Angular frontend
+        policy.WithOrigins("http://localhost:4200")    // Allow requests from Angular frontend
               .AllowAnyMethod()                       // Allow all HTTP methods (GET, POST, etc.)
               .AllowAnyHeader();                     // Allow all headers
     });
@@ -29,7 +31,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors("AllowLocalhost");
+app.UseCors("AllowLocalhost");    // Applying added Cors to the application
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

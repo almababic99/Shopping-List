@@ -1,16 +1,11 @@
-﻿namespace Infrastructure.Models
+﻿using Infrastructure.EntityModels;
+
+namespace Infrastructure.Models
 {
     public class Item
     {
         public int Id { get; set; }
-
         public string Name { get; set; }
-
-        public int Quantity { get; set; }
-
-        public int? ShopperId { get; set; }
-
-        // lista shopping listi
-        // shopping lista ima id shoppera i listu itema za svaku listu
+        public List<ShoppingListItem> ShoppingLists { get; set; } = new List<ShoppingListItem>();  // Item can be in multiple shopping lists
     }
 }

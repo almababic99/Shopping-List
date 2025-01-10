@@ -8,6 +8,6 @@
 
         public int Quantity { get; set; }
 
-        public int? ShopperId { get; set; }
+        public List<ShoppingListItemDTO> ShoppingLists { get; set; } = new List<ShoppingListItemDTO>();  // Item can be in multiple shopping lists
     }
 }

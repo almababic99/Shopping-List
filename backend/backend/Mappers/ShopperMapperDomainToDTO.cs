@@ -1,11 +1,11 @@
 ﻿using API.DTOModels;
-using Application.Models;
+using Domain.DomainModels;
 
 namespace API.Mappers
 {
-    public static class ShopperMapper
+    public static class ShopperMapperDomainToDTO
     {
-        public static ShopperDTO MapToDTO(Shopper shopper)  // This method maps Shopper model to ShopperDTO
+        public static ShopperDTO MapToDTO(ShopperDomain shopper)  // This method maps Shopper domain model to ShopperDTO
         {
             return new ShopperDTO
             {

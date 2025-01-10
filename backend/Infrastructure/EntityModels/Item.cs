@@ -1,4 +1,4 @@
-﻿namespace Application.Models
+﻿namespace Infrastructure.Models
 {
     public class Item
     {
@@ -9,5 +9,8 @@
         public int Quantity { get; set; }
 
         public int? ShopperId { get; set; }
+
+        // lista shopping listi
+        // shopping lista ima id shoppera i listu itema za svaku listu
     }
 }

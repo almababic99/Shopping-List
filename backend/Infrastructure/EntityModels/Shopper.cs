@@ -1,4 +1,4 @@
-﻿namespace Application.Models
+﻿namespace Infrastructure.Models
 {
     public class Shopper
     {
@@ -6,5 +6,7 @@
         public string Name { get; set; }
 
         // public List<Item> ShoppingList { get; set; } = new List<Item>();
+        // lista shopping listi
+        // shopping lista ima id shoppera i listu itema za svaku listu
     }
 }

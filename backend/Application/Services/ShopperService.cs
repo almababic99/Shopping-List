@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Application.Models;
+using Domain.DomainModels;
 
 namespace Application.Services
 {
@@ -12,9 +12,11 @@ namespace Application.Services
             _shopperRepository = shopperRepository;
         }
 
-        public async Task<IEnumerable<Shopper>> GetShoppers()  // This method calls the GetShoppers() method of the injected repository (_shopperRepository), which will fetch the list of shoppers from the database
+        public async Task<IEnumerable<ShopperDomain>> GetShoppers()  // This method calls the GetShoppers() method of the injected repository (_shopperRepository), which will fetch the list of shoppers from the database
         {
             return await _shopperRepository.GetShoppers();
         }
     }
 }
+
+

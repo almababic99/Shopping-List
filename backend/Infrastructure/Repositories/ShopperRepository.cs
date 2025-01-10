@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
-using Application.Models;
+using Domain.DomainModels;
 using Infrastructure.Data;
+using Infrastructure.Mappers;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
@@ -13,10 +14,10 @@ namespace Infrastructure.Repositories
             _shoppingListDbContext = shoppingListDbContext;
         }
 
-        public async Task<IEnumerable<Shopper>> GetShoppers()  // asynchronous method that retrieves all the Shopper entities from the database
-                                                               // Task is a type that represents an operation that will complete in the future; IEnumerable<Shopper> indicates that the result will be an enumeration (such as a list or array) of Shopper objects
+        public async Task<IEnumerable<ShopperDomain>> GetShoppers()                                                            
         {
-            return await _shoppingListDbContext.Shoppers.ToListAsync(); // retrieving all records from the Shoppers table in the database and returning them as a list
+            var shoppers = await _shoppingListDbContext.Shoppers.ToListAsync();  // Get all Shopper entities from the DB
+            return shoppers.Select(shopper => ShopperMapperEntityToDomain.MapToDomain(shopper));  // Map each Shopper entity to ShopperDomain and return as an IEnumerable<ShopperDomain>
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
 using API.Mappers;
+using Domain.DomainModels;
 
 namespace API.Controllers
 {
@@ -27,8 +28,8 @@ namespace API.Controllers
                 return NotFound();  // Return 404 if no shoppers found
             }
 
-            // Using ShopperMapper from API.Mappers to map each Shopper Entity model to ShopperDTO model
-            var shopperDTOs = shoppers.Select(shopper => ShopperMapper.MapToDTO(shopper)).ToList();
+            // Using ShopperMapper from API.Mappers to map each Shopper domain model to ShopperDTO model
+            var shopperDTOs = shoppers.Select(shopperDomain => ShopperMapperDomainToDTO.MapToDTO(shopperDomain)).ToList();
 
             return Ok(shopperDTOs); // the list of ShopperDTO objects is returned with a 200 OK response            
         }

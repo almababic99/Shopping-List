@@ -1,6 +1,6 @@
-﻿namespace Application.Models
+﻿namespace API.DTOModels
 {
-    public class Item
+    public class ItemDTO
     {
         public int Id { get; set; }
 

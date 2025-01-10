@@ -11,9 +11,9 @@ namespace API.Controllers
     {
         private readonly IShopperService _shopperService;
 
-        public ShopperController(IShopperService shopperInterface)  // Constructor for Dependency Injection of IShopperService
+        public ShopperController(IShopperService shopperService)  // Constructor for Dependency Injection of IShopperService
         {
-            _shopperService = shopperInterface;
+            _shopperService = shopperService;
         }
 
         [HttpGet]

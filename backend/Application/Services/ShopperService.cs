@@ -1,6 +1,5 @@
 ﻿using Application.Interfaces;
 using Application.Models;
-using Application.Repositories;
 
 namespace Application.Services
 {

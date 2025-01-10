@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Application.Services;
-using Application.Repositories;
 using Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);

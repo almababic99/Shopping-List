@@ -1,4 +1,4 @@
-﻿namespace Application.DTOModels
+﻿namespace API.DTOModels
 {
     public class ShopperDTO
     {

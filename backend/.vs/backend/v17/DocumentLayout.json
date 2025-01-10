@@ -11,48 +11,44 @@
       "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\controllers\\shoppercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\dtomodels\\shopperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\dtomodels\\shopperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\services\\shopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\services\\shopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\infrastructure\\data\\shoppinglistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\shoppinglistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\repositories\\ishopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\repositories\\ishopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\entitymodels\\shopper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\entitymodels\\shopper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\interfaces\\ishopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ishopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B314FE7-C7B3-446F-8A09-28FD327C384F}|Domain\\Domain.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\domain\\domainmodels\\shopperdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B314FE7-C7B3-446F-8A09-28FD327C384F}|Domain\\Domain.csproj|solutionrelative:domain\\domainmodels\\shopperdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\infrastructure\\repositories\\shopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\shopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1B314FE7-C7B3-446F-8A09-28FD327C384F}|Domain\\Domain.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\domain\\domainmodels\\shopperdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B314FE7-C7B3-446F-8A09-28FD327C384F}|Domain\\Domain.csproj|solutionrelative:domain\\domainmodels\\shopperdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\repositories\\ishopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\repositories\\ishopperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\interfaces\\ishopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ishopperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\infrastructure\\data\\shoppinglistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\shoppinglistdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\entitymodels\\shopper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\entitymodels\\shopper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\entitymodels\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\entitymodels\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\dtomodels\\shopperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\dtomodels\\shopperdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,59 +58,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Item.cs",
-              "RelativeDocumentMoniker": "Application\\EntityModels\\Item.cs",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Item.cs",
-              "RelativeToolTip": "Application\\EntityModels\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:26:32.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Shopper.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Shopper.cs",
               "RelativeDocumentMoniker": "Application\\EntityModels\\Shopper.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Shopper.cs",
               "RelativeToolTip": "Application\\EntityModels\\Shopper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:25:36.822Z"
+              "WhenOpened": "2025-01-09T13:25:36.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IShopperRepository.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Repositories\\IShopperRepository.cs",
               "RelativeDocumentMoniker": "Application\\Repositories\\IShopperRepository.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Repositories\\IShopperRepository.cs",
               "RelativeToolTip": "Application\\Repositories\\IShopperRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:20:31.103Z"
+              "WhenOpened": "2025-01-09T13:20:31.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "ShopperRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ShopperRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ShopperRepository.cs",
+              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ShopperRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\ShopperRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T11:58:10.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ShoppingListDbContext.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Data\\ShoppingListDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\ShoppingListDbContext.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Data\\ShoppingListDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\ShoppingListDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T12:58:18.24Z"
+              "WhenOpened": "2025-01-09T12:58:18.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "backend\\Program.cs",
@@ -122,59 +122,38 @@
               "RelativeToolTip": "backend\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T12:36:15.16Z"
+              "WhenOpened": "2025-01-09T12:36:15.16Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "ShopperDomain.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Domain\\DomainModels\\ShopperDomain.cs",
               "RelativeDocumentMoniker": "Domain\\DomainModels\\ShopperDomain.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Domain\\DomainModels\\ShopperDomain.cs",
               "RelativeToolTip": "Domain\\DomainModels\\ShopperDomain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T12:44:52.378Z"
+              "WhenOpened": "2025-01-09T12:44:52.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Application.csproj",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "Application\\Application.csproj",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Application.csproj",
-              "RelativeToolTip": "Application\\Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-09T12:36:14.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ShopperRepository.cs",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ShopperRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ShopperRepository.cs",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ShopperRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\ShopperRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T11:58:10.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "IShopperService.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Interfaces\\IShopperService.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IShopperService.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Interfaces\\IShopperService.cs",
               "RelativeToolTip": "Application\\Interfaces\\IShopperService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T11:41:19.057Z"
+              "WhenOpened": "2025-01-09T11:41:19.057Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ShopperService.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Services\\ShopperService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ShopperService.cs",
@@ -182,19 +161,21 @@
               "RelativeToolTip": "Application\\Services\\ShopperService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T11:47:52.223Z"
+              "WhenOpened": "2025-01-09T11:47:52.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "ShopperDTO.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\DTOModels\\ShopperDTO.cs",
               "RelativeDocumentMoniker": "backend\\DTOModels\\ShopperDTO.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\DTOModels\\ShopperDTO.cs",
               "RelativeToolTip": "backend\\DTOModels\\ShopperDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:37:52.178Z"
+              "WhenOpened": "2025-01-09T13:37:52.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -204,7 +185,7 @@
               "RelativeDocumentMoniker": "backend\\Controllers\\ShopperController.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ShopperController.cs",
               "RelativeToolTip": "backend\\Controllers\\ShopperController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T13:43:44.64Z",
               "EditorCaption": ""
@@ -217,9 +198,22 @@
               "RelativeDocumentMoniker": "backend\\Mappers\\ShopperMapper.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Mappers\\ShopperMapper.cs",
               "RelativeToolTip": "backend\\Mappers\\ShopperMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T11:33:02.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Item.cs",
+              "RelativeDocumentMoniker": "Application\\EntityModels\\Item.cs",
+              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\EntityModels\\Item.cs",
+              "RelativeToolTip": "Application\\EntityModels\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T13:26:32.506Z",
               "EditorCaption": ""
             }
           ]

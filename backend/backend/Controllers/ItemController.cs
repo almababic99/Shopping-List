@@ -27,7 +27,7 @@ namespace API.Controllers
             }
 
             // Using ItemMapper from API.Mappers to map each Item domain model to ItemDTO model
-            var itemDTOs = items.Select(itemDomain => ItemMapperDomainToDTO.MapToDTO(itemDomain)).ToList();
+            var itemDTOs = items.Select(item => ItemMapperDomainToDTO.MapToDTO(item)).ToList();
 
             return Ok(itemDTOs); // the list of ItemDTO objects is returned with a 200 OK response            
         }

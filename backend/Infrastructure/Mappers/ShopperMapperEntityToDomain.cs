@@ -5,9 +5,9 @@ namespace Infrastructure.Mappers
 {
     public static class ShopperMapperEntityToDomain
     {
-        public static ShopperDomain MapToDomain(Shopper shopper)  // This method maps Shopper entity model to Domain model
+        public static Shopper MapToDomain(ShopperEntity shopper)  // This method maps Shopper entity model to Domain model
         {
-            return new ShopperDomain
+            return new Shopper
             {
                 Id = shopper.Id,
                 Name = shopper.Name

@@ -1,6 +1,6 @@
 ﻿namespace Domain.DomainModels
 {
-    public class ShoppingListItemDomain
+    public class ShoppingListItem
     {
         public int Id { get; set; }
         public int ShoppingListId { get; set; }  // Foreign key to ShoppingList

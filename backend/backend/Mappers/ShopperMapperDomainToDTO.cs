@@ -5,7 +5,7 @@ namespace API.Mappers
 {
     public static class ShopperMapperDomainToDTO
     {
-        public static ShopperDTO MapToDTO(ShopperDomain shopper)  // This method maps Shopper domain model to ShopperDTO
+        public static ShopperDTO MapToDTO(Shopper shopper)  // This method maps Shopper domain model to ShopperDTO
         {
             return new ShopperDTO
             {

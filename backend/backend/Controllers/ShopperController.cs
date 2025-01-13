@@ -28,7 +28,7 @@ namespace API.Controllers
             }
 
             // Using ShopperMapper from API.Mappers to map each Shopper domain model to ShopperDTO model
-            var shopperDTOs = shoppers.Select(shopperDomain => ShopperMapperDomainToDTO.MapToDTO(shopperDomain)).ToList();
+            var shopperDTOs = shoppers.Select(shopper => ShopperMapperDomainToDTO.MapToDTO(shopper)).ToList();
 
             return Ok(shopperDTOs); // the list of ShopperDTO objects is returned with a 200 OK response            
         }

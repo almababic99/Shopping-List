@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.EntityModels
 {
-    public class ShoppingListItem
+    public class ShoppingListItemEntity
     {
         public int Id { get; set; }
         public int ShoppingListId { get; set; }  // Foreign key to ShoppingList

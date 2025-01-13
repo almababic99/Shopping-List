@@ -1,11 +1,13 @@
-﻿using Infrastructure.EntityModels;
-
-namespace Infrastructure.Models
+﻿namespace Domain.DomainModels
 {
     public class Item
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
+
+        public int Quantity { get; set; }
+
         public List<ShoppingListItem> ShoppingLists { get; set; } = new List<ShoppingListItem>();  // Item can be in multiple shopping lists
     }
 }

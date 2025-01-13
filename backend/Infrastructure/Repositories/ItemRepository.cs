@@ -14,10 +14,10 @@ namespace Infrastructure.Repositories
             _shoppingListDbContext = shoppingListDbContext;
         }
 
-        public async Task<IEnumerable<ItemDomain>> GetItems()
+        public async Task<IEnumerable<Item>> GetItems()
         {
             var items = await _shoppingListDbContext.Items.ToListAsync();  // Get all Item entities from the DB
-            return items.Select(item => ItemMapperEntityToDomain.MapToDomain(item));  // Map each Item entity to ItemDomain and return as an IEnumerable<ItemDomain>
+            return items.Select(item => ItemMapperEntityToDomain.MapToDomain(item));  // Map each Item entity to ItemDomain and return as an IEnumerable<Item>
         }
     }
 }

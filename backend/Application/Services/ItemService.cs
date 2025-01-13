@@ -12,7 +12,7 @@ namespace Application.Services
             _itemRepository = itemRepository;
         }
 
-        public async Task<IEnumerable<ItemDomain>> GetItems()  // This method calls the GetItems() method of the injected repository (_itemRepository), which will fetch the list of items from the database
+        public async Task<IEnumerable<Item>> GetItems()  // This method calls the GetItems() method of the injected repository (_itemRepository), which will fetch the list of items from the database
         {
             return await _itemRepository.GetItems();
         }

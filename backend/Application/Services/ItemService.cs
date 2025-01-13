@@ -16,5 +16,17 @@ namespace Application.Services
         {
             return await _itemRepository.GetItems();
         }
+
+        public async Task AddItem(Item item)
+        {
+            var existingItem = await _itemRepository.GetItem(item.Name);
+
+            if (existingItem != null)
+            {
+                throw new InvalidOperationException("An item with the same name already exists");  // if the name already exists it throws an error
+            }
+
+            await _itemRepository.AddItem(item);  
+        }
     }
 }

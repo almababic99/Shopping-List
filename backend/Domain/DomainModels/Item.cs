@@ -6,8 +6,6 @@
 
         public string Name { get; set; }
 
-        public int Quantity { get; set; }
-
         public List<ShoppingListItem> ShoppingLists { get; set; } = new List<ShoppingListItem>();  // Item can be in multiple shopping lists
     }
 }

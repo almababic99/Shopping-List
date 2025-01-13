@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "API.Controllers.ItemController",
-    "Method": "Get",
-    "RelativePath": "api/Item",
+    "Method": "AddItem",
+    "RelativePath": "api/Item/addItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemDTO",
+        "Type": "API.DTOModels.ItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ItemController",
+    "Method": "GetItems",
+    "RelativePath": "api/Item/items",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

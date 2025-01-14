@@ -11,5 +11,7 @@ namespace Application.Interfaces
         Task<Item> GetItemById(int id);  // get item by id
 
         Task AddItem(Item item);  // add item to database
+
+        Task DeleteItem(int id);  // delete item from database
     }
 }

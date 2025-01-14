@@ -64,11 +64,13 @@ namespace API.Controllers
             return Ok();  // mapping domain to dto
         }
 
-        //[HttpDelete]
-        //[Route("deleteItem/{id}")]
-        //public async Task<IActionResult> DeleteItem(int id)
-        //{
+        [HttpDelete]
+        [Route("deleteItem/{id}")]
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            await _itemService.DeleteItem(id);
 
-        //}
+            return Ok();
+        }
     }
 }

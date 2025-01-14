@@ -46,5 +46,16 @@ namespace Infrastructure.Repositories
 
             await _shoppingListDbContext.SaveChangesAsync();   // saving changes to database
         }
+
+        public async Task DeleteItem(int id)
+        {
+            var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
+
+            if (itemEntity != null)
+            {
+                _shoppingListDbContext.Items.Remove(itemEntity);
+                await _shoppingListDbContext.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -9,5 +9,7 @@ namespace Application.Interfaces
         Task<Item> GetItemById(int id); 
 
         Task AddItem(Item itme);
+
+        Task DeleteItem(int id);
     }
 }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -114,13 +114,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\ItemController.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ItemController.cs",
               "RelativeToolTip": "backend\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowEQAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAADwv0kAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T13:52:45.936Z",
               "EditorCaption": ""
@@ -133,46 +133,46 @@
               "RelativeDocumentMoniker": "Application\\Interfaces\\IItemService.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Interfaces\\IItemService.cs",
               "RelativeToolTip": "Application\\Interfaces\\IItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T09:21:46.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ItemService.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Services\\ItemService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ItemService.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Services\\ItemService.cs",
               "RelativeToolTip": "Application\\Services\\ItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T13:52:15.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Interfaces\\IItemRepository.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IItemRepository.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Interfaces\\IItemRepository.cs",
               "RelativeToolTip": "Application\\Interfaces\\IItemRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T09:21:47.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ItemRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ItemRepository.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ItemRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\ItemRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBkAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T13:51:30.374Z",
               "EditorCaption": ""

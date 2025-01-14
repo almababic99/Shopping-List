@@ -13,5 +13,7 @@ namespace Application.Interfaces
         Task AddItem(Item item);  // add item to database
 
         Task DeleteItem(int id);  // delete item from database
+
+        Task EditItem(Item item);   // edit item from database
     }
 }

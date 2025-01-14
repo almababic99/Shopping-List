@@ -47,7 +47,7 @@ namespace Infrastructure.Repositories
             await _shoppingListDbContext.SaveChangesAsync();   // saving changes to database
         }
 
-        public async Task DeleteItem(int id)
+        public async Task DeleteItem(int id)   // delete item from database
         {
             var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
 
@@ -55,6 +55,20 @@ namespace Infrastructure.Repositories
             {
                 _shoppingListDbContext.Items.Remove(itemEntity);
                 await _shoppingListDbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task EditItem(Item item)   // edit item from database
+        {
+            var itemEntity = ItemMapperDomainToEntity.MapToEntity(item);   // mapping domain to entity
+
+            var itemToEdit = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i =>i.Id == itemEntity.Id);
+
+            if (itemToEdit != null)
+            {
+                itemToEdit.Name = itemEntity.Name;   // Assign the edited name to the item to be saved
+                _shoppingListDbContext.Entry(itemToEdit).State = EntityState.Modified;   // mark entity as modified in Entity Framework
+                await _shoppingListDbContext.SaveChangesAsync();  // Save the changes to the database
             }
         }
     }

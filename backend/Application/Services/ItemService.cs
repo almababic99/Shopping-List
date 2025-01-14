@@ -38,5 +38,10 @@ namespace Application.Services
         {
             await _itemRepository.DeleteItem(id);
         }
+
+        public async Task EditItem(Item item)
+        {
+            await _itemRepository.EditItem(item);
+        }
     }
 }

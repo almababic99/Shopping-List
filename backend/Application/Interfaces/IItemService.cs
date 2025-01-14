@@ -11,5 +11,7 @@ namespace Application.Interfaces
         Task AddItem(Item itme);
 
         Task DeleteItem(int id);
+
+        Task EditItem(Item item);
     }
 }

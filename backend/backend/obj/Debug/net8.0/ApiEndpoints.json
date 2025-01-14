@@ -33,6 +33,27 @@
   },
   {
     "ContainingType": "API.Controllers.ItemController",
+    "Method": "EditItem",
+    "RelativePath": "api/Item/editItem/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "itemDTO",
+        "Type": "API.DTOModels.ItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ItemController",
     "Method": "GetItemById",
     "RelativePath": "api/Item/item/{id}",
     "HttpMethod": "GET",

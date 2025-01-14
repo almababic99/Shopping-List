@@ -61,7 +61,7 @@ namespace API.Controllers
 
             await _itemService.AddItem(item);   // passing domain to service
 
-            return Ok();  // mapping domain to dto
+            return Ok();  
         }
 
         [HttpDelete]
@@ -69,6 +69,23 @@ namespace API.Controllers
         public async Task<IActionResult> DeleteItem(int id)
         {
             await _itemService.DeleteItem(id);
+            
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("editItem/{id}")]
+
+        public async Task<IActionResult> EditItem(int id, [FromBody] ItemDTO itemDTO)
+        {
+            if (id != itemDTO.Id)
+            {
+                return BadRequest();
+            }
+
+            var item = ItemMapperDTOToDomain.MapToDomain(itemDTO);  // mapping dto to domain and passing it to service
+
+            await _itemService.EditItem(item);  // passing domain to service
 
             return Ok();
         }

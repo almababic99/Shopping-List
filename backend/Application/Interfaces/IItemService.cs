@@ -4,14 +4,14 @@ namespace Application.Interfaces
 {
     public interface IItemService // An interface defines the signature (method names, parameters, return types) of methods, while the class that implements the interface provides the specific implementation of those method (ItemService)
     {
-        Task<IEnumerable<Item>> GetItems();  // asynchronous method that returns a task containing an enumerable collection of Item objects
+        Task<IEnumerable<Item>> GetItems();  // get all items
 
-        Task<Item> GetItemById(int id); 
+        Task<Item> GetItemById(int id);   // get item by id
 
-        Task AddItem(Item itme);
+        Task AddItem(Item item);  // add item to database
 
-        Task DeleteItem(int id);
+        Task DeleteItem(int id);  // delete item from database
 
-        Task EditItem(Item item);
+        Task EditItem(Item item);   // edit item from database
     }
 }

@@ -2,7 +2,6 @@
 using Domain.DomainModels;
 using Infrastructure.Data;
 using Infrastructure.Mappers;
-using Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
@@ -21,7 +20,7 @@ namespace Infrastructure.Repositories
             return items.Select(item => ItemMapperEntityToDomain.MapToDomain(item));  // Map each Item entity to ItemDomain and return as an IEnumerable<Item>
         }
 
-        public async Task<Item> GetItem(string name)  // get item by name
+        public async Task<Item?> GetItem(string name)  // get item by name
         {
             var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Name.ToLower() == name.ToLower());
             return itemEntity != null ? ItemMapperEntityToDomain.MapToDomain(itemEntity) : null;
@@ -29,7 +28,7 @@ namespace Infrastructure.Repositories
             // if itemEntity is null it returns null
         }
 
-        public async Task<Item> GetItemById(int id)  // get item by id
+        public async Task<Item?> GetItemById(int id)  // get item by id
         {
             var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i =>i.Id == id);
             return itemEntity != null ? ItemMapperEntityToDomain.MapToDomain(itemEntity) : null;

@@ -17,6 +17,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Route("shoppers")]
         public async Task<IActionResult> Get()   // The Get() method uses the _shopperService.GetShoppers() method to fetch the list of shoppers. This is an asynchronous operation, so it uses await to wait for the result.
         {
             var shoppers = await _shopperService.GetShoppers();

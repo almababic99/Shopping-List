@@ -17,6 +17,11 @@ namespace Application.Services
             return await _itemRepository.GetItems();
         }
 
+        public async Task<Item> GetItemById(int id)
+        {
+            return await _itemRepository.GetItemById(id);
+        }
+
         public async Task AddItem(Item item)
         {
             var existingItem = await _itemRepository.GetItem(item.Name);

@@ -15,19 +15,29 @@ namespace Infrastructure.Repositories
             _shoppingListDbContext = shoppingListDbContext;
         }
 
-        public async Task<IEnumerable<Item>> GetItems()
+        public async Task<IEnumerable<Item>> GetItems()  // get all items
         {
             var items = await _shoppingListDbContext.Items.ToListAsync();  // Get all Item entities from the DB
             return items.Select(item => ItemMapperEntityToDomain.MapToDomain(item));  // Map each Item entity to ItemDomain and return as an IEnumerable<Item>
         }
 
-        public async Task<Item> GetItem(string name)
+        public async Task<Item> GetItem(string name)  // get item by name
         {
             var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Name.ToLower() == name.ToLower());
             return itemEntity != null ? ItemMapperEntityToDomain.MapToDomain(itemEntity) : null;
+            // if itemEntity is not null method ItemMapperEntityToDomain.MapToDomain(itemEntity) is called to map entity model to domain model
+            // if itemEntity is null it returns null
         }
 
-        public async Task AddItem(Item item)
+        public async Task<Item> GetItemById(int id)  // get item by id
+        {
+            var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i =>i.Id == id);
+            return itemEntity != null ? ItemMapperEntityToDomain.MapToDomain(itemEntity) : null;
+            // if itemEntity is not null method ItemMapperEntityToDomain.MapToDomain(itemEntity) is called to map entity model to domain model
+            // if itemEntity is null it returns null
+        }
+
+        public async Task AddItem(Item item)  // add item to database
         {
             // if the name of an item is not already in database we can add it:
             var itemEntity = ItemMapperDomainToEntity.MapToEntity(item);  // mapping domain to entity

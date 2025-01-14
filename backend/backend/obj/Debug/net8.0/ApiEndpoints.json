@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "API.Controllers.ItemController",
+    "Method": "GetItemById",
+    "RelativePath": "api/Item/item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ItemController",
     "Method": "GetItems",
     "RelativePath": "api/Item/items",
     "HttpMethod": "GET",
@@ -28,7 +44,7 @@
   {
     "ContainingType": "API.Controllers.ShopperController",
     "Method": "Get",
-    "RelativePath": "api/Shopper",
+    "RelativePath": "api/Shopper/shoppers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

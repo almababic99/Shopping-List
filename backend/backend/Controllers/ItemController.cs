@@ -34,6 +34,20 @@ namespace API.Controllers
             return Ok(itemDTOs); // the list of ItemDTO objects is returned with a 200 OK response            
         }
 
+        [HttpGet]
+        [Route("item/{id}")]
+        public async Task<IActionResult> GetItemById(int id)
+        {
+            var item = await _itemService.GetItemById(id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(item);
+        }
+
         [HttpPost]
         [Route("addItem")]
         public async Task<IActionResult> AddItem([FromBody] ItemDTO itemDTO)
@@ -49,5 +63,12 @@ namespace API.Controllers
 
             return Ok();  // mapping domain to dto
         }
+
+        //[HttpDelete]
+        //[Route("deleteItem/{id}")]
+        //public async Task<IActionResult> DeleteItem(int id)
+        //{
+
+        //}
     }
 }

@@ -6,6 +6,8 @@ namespace Application.Interfaces
     {
         Task<IEnumerable<Item>> GetItems();  // asynchronous method that returns a task containing an enumerable collection of Item objects
 
+        Task<Item> GetItemById(int id); 
+
         Task AddItem(Item itme);
     }
 }

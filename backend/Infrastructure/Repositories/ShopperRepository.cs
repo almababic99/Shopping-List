@@ -14,10 +14,18 @@ namespace Infrastructure.Repositories
             _shoppingListDbContext = shoppingListDbContext;
         }
 
-        public async Task<IEnumerable<Shopper>> GetShoppers()                                                            
+        public async Task<IEnumerable<Shopper>> GetShoppers()   // get all shoppers                                                         
         {
             var shoppers = await _shoppingListDbContext.Shoppers.ToListAsync();  // Get all Shopper entities from the DB
             return shoppers.Select(shopper => ShopperMapperEntityToDomain.MapToDomain(shopper));  // Map each Shopper entity to ShopperDomain and return as an IEnumerable<Shopper>
+        }
+
+        public async Task<Shopper?> GetShopperById(int id)  // get shopper by id
+        {
+            var shopperEntity = await _shoppingListDbContext.Shoppers.FirstOrDefaultAsync(i => i.Id == id);
+            return shopperEntity != null ? ShopperMapperEntityToDomain.MapToDomain(shopperEntity) : null;
+            // if shopperEntity is not null method ShopperMapperEntityToDomain.MapToDomain(shopperEntity) is called to map entity model to domain model
+            // if shopperEntity is null it returns null
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
 using API.Mappers;
+using Application.Services;
 
 namespace API.Controllers
 {
@@ -32,6 +33,20 @@ namespace API.Controllers
             var shopperDTOs = shoppers.Select(shopper => ShopperMapperDomainToDTO.MapToDTO(shopper)).ToList();
 
             return Ok(shopperDTOs); // the list of ShopperDTO objects is returned with a 200 OK response            
+        }
+
+        [HttpGet]
+        [Route("shopper/{id}")]
+        public async Task<IActionResult> GetShopperById(int id)
+        {
+            var shopper = await _shopperService.GetShopperById(id);
+
+            if (shopper == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(shopper);
         }
     }
 }

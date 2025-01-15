@@ -16,6 +16,11 @@ namespace Application.Services
         {
             return await _shopperRepository.GetShoppers();
         }
+
+        public async Task<Shopper> GetShopperById(int id)
+        {
+            return await _shopperRepository.GetShopperById(id);
+        }
     }
 }
 

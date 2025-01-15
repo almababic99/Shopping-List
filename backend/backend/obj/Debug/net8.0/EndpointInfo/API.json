@@ -170,6 +170,18 @@
           }
         }
       }
+    },
+    "/api/ShoppingList/shoppingLists": {
+      "get": {
+        "tags": [
+          "ShoppingList"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -202,17 +214,8 @@
             "type": "integer",
             "format": "int32"
           },
-          "shoppingListId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "itemId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
+          "item": {
+            "$ref": "#/components/schemas/ItemDTO"
           }
         },
         "additionalProperties": false

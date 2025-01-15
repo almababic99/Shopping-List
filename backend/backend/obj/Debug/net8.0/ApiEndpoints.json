@@ -103,5 +103,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ShoppingListController",
+    "Method": "GetShoppingLists",
+    "RelativePath": "api/ShoppingList/shoppingLists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

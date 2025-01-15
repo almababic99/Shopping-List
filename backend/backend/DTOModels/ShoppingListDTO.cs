@@ -3,7 +3,7 @@
     public class ShoppingListDTO
     {
         public int Id { get; set; }
-        public int? ShopperId { get; set; }
+        public ShopperDTO? Shopper { get; set; }   // Shopper details
         public List<ShoppingListItemDTO> Items { get; set; } = new List<ShoppingListItemDTO>();  
     }
 }

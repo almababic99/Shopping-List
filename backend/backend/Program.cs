@@ -12,6 +12,8 @@ builder.Services.AddScoped<IShopperRepository, ShopperRepository>();  // This re
 builder.Services.AddScoped<IShopperService, ShopperService>();        // This registers the ShopperService as a scoped service that implements the IShopperService interface.
 builder.Services.AddScoped<IItemRepository, ItemRepository>();        // This registers the ItemRepository as a scoped service that implements the IItemRepository interface.
 builder.Services.AddScoped<IItemService, ItemService>();              // This registers the ItemService as a scoped service that implements the IItemService interface.
+builder.Services.AddScoped<IShoppingListRepository, ShoppingListRepository>();   // This registers the ShoppingListRepository as a scoped service that implements the IShoppingListRepository interface.
+builder.Services.AddScoped<IShoppingListService, ShoppingListService>();         // This registers the ShoppingListService as a scoped service that implements the IShoppingListService interface.
 
 builder.Services.AddControllers();
 

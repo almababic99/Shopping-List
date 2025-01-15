@@ -21,7 +21,7 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("ShoppingLists");
                 });
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItem", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItemEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,9 +48,6 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<int>("ShoppingListId")
@@ -65,7 +62,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("ShoppingListItems");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Item", b =>
+            modelBuilder.Entity("Infrastructure.Models.ItemEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -82,7 +79,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Shopper", b =>
+            modelBuilder.Entity("Infrastructure.Models.ShopperEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,39 +96,45 @@ namespace Infrastructure.Migrations
                     b.ToTable("Shoppers");
                 });
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Shopper", null)
+                    b.HasOne("Infrastructure.Models.ShopperEntity", "Shopper")
                         .WithMany("ShoppingLists")
                         .HasForeignKey("ShopperId");
+
+                    b.Navigation("Shopper");
                 });
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItem", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItemEntity", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Item", null)
+                    b.HasOne("Infrastructure.Models.ItemEntity", "Item")
                         .WithMany("ShoppingLists")
                         .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Infrastructure.EntityModels.ShoppingList", null)
+                    b.HasOne("Infrastructure.EntityModels.ShoppingListEntity", "ShoppingList")
                         .WithMany("Items")
                         .HasForeignKey("ShoppingListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("ShoppingList");
                 });
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Item", b =>
+            modelBuilder.Entity("Infrastructure.Models.ItemEntity", b =>
                 {
                     b.Navigation("ShoppingLists");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Shopper", b =>
+            modelBuilder.Entity("Infrastructure.Models.ShopperEntity", b =>
                 {
                     b.Navigation("ShoppingLists");
                 });

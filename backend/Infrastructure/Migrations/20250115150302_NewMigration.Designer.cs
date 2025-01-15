@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ShoppingListDbContext))]
-    [Migration("20250110124716_NewMigration")]
+    [Migration("20250115150302_NewMigration")]
     partial class NewMigration
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,10 +39,33 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ShopperId");
 
-                    b.ToTable("ShoppingList");
+                    b.ToTable("ShoppingLists");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Item", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItemEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShoppingListId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("ShoppingListId");
+
+                    b.ToTable("ShoppingListItems");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.ItemEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -54,15 +77,12 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Shopper", b =>
+            modelBuilder.Entity("Infrastructure.Models.ShopperEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,46 +99,47 @@ namespace Infrastructure.Migrations
                     b.ToTable("Shoppers");
                 });
 
-            modelBuilder.Entity("ItemShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
-                    b.Property<int>("ItemsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("shoppingListsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ItemsId", "shoppingListsId");
-
-                    b.HasIndex("shoppingListsId");
-
-                    b.ToTable("ItemShoppingList");
-                });
-
-            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingList", b =>
-                {
-                    b.HasOne("Infrastructure.Models.Shopper", null)
-                        .WithMany("shoppingLists")
+                    b.HasOne("Infrastructure.Models.ShopperEntity", "Shopper")
+                        .WithMany("ShoppingLists")
                         .HasForeignKey("ShopperId");
+
+                    b.Navigation("Shopper");
                 });
 
-            modelBuilder.Entity("ItemShoppingList", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListItemEntity", b =>
                 {
-                    b.HasOne("Infrastructure.Models.Item", null)
-                        .WithMany()
-                        .HasForeignKey("ItemsId")
+                    b.HasOne("Infrastructure.Models.ItemEntity", "Item")
+                        .WithMany("ShoppingLists")
+                        .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Infrastructure.EntityModels.ShoppingList", null)
-                        .WithMany()
-                        .HasForeignKey("shoppingListsId")
+                    b.HasOne("Infrastructure.EntityModels.ShoppingListEntity", "ShoppingList")
+                        .WithMany("Items")
+                        .HasForeignKey("ShoppingListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("ShoppingList");
                 });
 
-            modelBuilder.Entity("Infrastructure.Models.Shopper", b =>
+            modelBuilder.Entity("Infrastructure.EntityModels.ShoppingListEntity", b =>
                 {
-                    b.Navigation("shoppingLists");
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.ItemEntity", b =>
+                {
+                    b.Navigation("ShoppingLists");
+                });
+
+            modelBuilder.Entity("Infrastructure.Models.ShopperEntity", b =>
+                {
+                    b.Navigation("ShoppingLists");
                 });
 #pragma warning restore 612, 618
         }

@@ -44,5 +44,30 @@ namespace API.Controllers
 
             return Ok(shoppingListsDTOs); // the list of ShoppingListsDTO objects is returned with a 200 OK response    
         }
+
+        [HttpGet]
+        [Route("shoppingLists/{shopperId}")]
+
+        public async Task<IActionResult> GetShoppingListsByShopperId(int shopperId)
+        {
+            var shoppingLists = await _shoppingListService.GetShoppingListsByShopperId(shopperId);
+
+            // Check if the result is null or empty and return appropriate response
+            if (shoppingLists == null || !shoppingLists.Any())
+            {
+                return NotFound();  // Return 404 if no shopping lists found
+            }
+
+            // Using ShoppingListMapper from API.Mappers to map each ShoppingList domain model to ShoppingListDTO model
+            var shoppingListsDTOs = new List<ShoppingListDTO>();
+
+            foreach (var shoppingList in shoppingLists)
+            {
+                var shoppingListDTO = await ShoppingListMapperDomainToDTO.MapToDTO(shoppingList, _shopperService, _itemService);
+                shoppingListsDTOs.Add(shoppingListDTO);
+            }
+
+            return Ok(shoppingListsDTOs); // the list of ShoppingListsDTO objects is returned with a 200 OK response    
+        }
     }
 }

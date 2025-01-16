@@ -21,6 +21,28 @@ namespace Application.Services
         {
             return await _shopperRepository.GetShopperById(id);
         }
+
+        public async Task AddShopper(Shopper shopper)
+        {
+            var existingShopper = await _shopperRepository.GetShopper(shopper.Name);
+
+            if (existingShopper != null)
+            {
+                throw new InvalidOperationException("Shopper with the same name already exists");  // if the name already exists it throws an error
+            }
+
+            await _shopperRepository.AddShopper(shopper);
+        }
+
+        public async Task DeleteShopper(int id)
+        {
+            await _shopperRepository.DeleteShopper(id);
+        }
+
+        public async Task EditShopper(Shopper shopper)
+        {
+            await _shopperRepository.EditShopper(shopper);
+        }
     }
 }
 

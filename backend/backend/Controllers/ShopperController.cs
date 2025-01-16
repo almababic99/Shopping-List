@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
 using API.Mappers;
+using API.DTOModels;
+using Application.Services;
 
 namespace API.Controllers
 {
@@ -46,6 +48,48 @@ namespace API.Controllers
             }
 
             return Ok(shopper);
+        }
+
+        [HttpPost]
+        [Route("addShopper")]
+        public async Task<IActionResult> AddShopper([FromBody] ShopperDTO shopperDTO)
+        {
+            if (shopperDTO == null)
+            {
+                return BadRequest("Shopper data is null");
+            }
+
+            var shopper = ShopperMapperDTOToDomain.MapToDomain(shopperDTO);  // mapping dto to domain and passing it to service
+
+            await _shopperService.AddShopper(shopper);   // passing domain to service
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("deleteShopper/{id}")]
+        public async Task<IActionResult> DeleteShopper(int id)
+        {
+            await _shopperService.DeleteShopper(id);
+
+            return Ok();
+        }
+
+        [HttpPut]
+        [Route("editShopper/{id}")]
+
+        public async Task<IActionResult> EditShopper(int id, [FromBody] ShopperDTO shopperDTO)
+        {
+            if (id != shopperDTO.Id)
+            {
+                return BadRequest();
+            }
+
+            var shopper = ShopperMapperDTOToDomain.MapToDomain(shopperDTO);  // mapping dto to domain and passing it to service
+
+            await _shopperService.EditShopper(shopper);  // passing domain to service
+
+            return Ok();
         }
     }
 }

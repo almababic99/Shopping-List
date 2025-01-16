@@ -7,5 +7,11 @@ namespace Application.Interfaces
         Task<IEnumerable<Shopper>> GetShoppers();  // asynchronous method that returns a task containing an enumerable collection of Shopper objects
 
         Task<Shopper> GetShopperById(int id);   // get shopper by id
+
+        Task AddShopper(Shopper shopper);  // add shopper to database
+
+        Task DeleteShopper(int id);  // delete shopper from database
+
+        Task EditShopper(Shopper shopper);   // edit shopper from database
     }
 }

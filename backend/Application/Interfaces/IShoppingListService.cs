@@ -7,5 +7,7 @@ namespace Application.Interfaces
         Task<IEnumerable<ShoppingList>> GetShoppingLists();
 
         Task<IEnumerable<ShoppingList>> GetShoppingListsByShopperId(int shopperId);
+
+        Task DeleteShoppingList(int id);
     }
 }

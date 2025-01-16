@@ -69,5 +69,14 @@ namespace API.Controllers
 
             return Ok(shoppingListsDTOs); // the list of ShoppingListsDTO objects is returned with a 200 OK response    
         }
+
+        [HttpDelete]
+        [Route("deleteShoppingList/{id}")]
+        public async Task<IActionResult> DeleteShopping(int id)
+        {
+            await _shoppingListService.DeleteShoppingList(id);
+
+            return Ok();
+        }
     }
 }

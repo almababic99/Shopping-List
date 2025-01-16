@@ -16,7 +16,6 @@ namespace Infrastructure.Mappers
                     Id = itemEntity.Id,
                     ShoppingListId = itemEntity.ShoppingListId,
                     ItemId = itemEntity.ItemId,
-                    // Quantity = itemEntity.Quantity
                 }).ToList()
             };
         }

@@ -21,5 +21,10 @@ namespace Application.Services
         {
             return await _shoppingListRepository.GetShoppingListsByShopperId(shopperId);
         }
+
+        public async Task DeleteShoppingList(int id)
+        {
+            await _shoppingListRepository.DeleteShoppingList(id);
+        }
     }
 }

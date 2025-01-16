@@ -33,5 +33,16 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
             return shoppingLists.Select(shoppingList => ShoppingListMapperEntityToDomain.MapToDomain(shoppingList));
         }
+
+        public async Task DeleteShoppingList(int id)   // delete shopping list from database
+        {
+            var shoppingListEntity = await _shoppingListDbContext.ShoppingLists.FirstOrDefaultAsync(i => i.Id == id);
+
+            if (shoppingListEntity != null)
+            {
+                _shoppingListDbContext.ShoppingLists.Remove(shoppingListEntity);
+                await _shoppingListDbContext.SaveChangesAsync();
+            }
+        }
     }
 }

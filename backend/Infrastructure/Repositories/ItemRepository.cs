@@ -48,12 +48,22 @@ namespace Infrastructure.Repositories
 
         public async Task DeleteItem(int id)   // delete item from database
         {
-            var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
+            var itemInShoppingList = await _shoppingListDbContext.ShoppingListItems.FirstOrDefaultAsync(i => i.ItemId == id);   // checking if item is in a shopping list
 
-            if (itemEntity != null)
+            if (itemInShoppingList != null)   // if item is in a shopping list it can't be deleted
             {
-                _shoppingListDbContext.Items.Remove(itemEntity);
-                await _shoppingListDbContext.SaveChangesAsync();
+                throw new InvalidOperationException("Item is in a shopping list and it can't be deleted");
+            }
+
+            else    // if item is not in a shopping list it can be deleted
+            {
+                var itemEntity = await _shoppingListDbContext.Items.FirstOrDefaultAsync(i => i.Id == id);
+
+                if (itemEntity != null)
+                {
+                    _shoppingListDbContext.Items.Remove(itemEntity);
+                    await _shoppingListDbContext.SaveChangesAsync();
+                }
             }
         }
 

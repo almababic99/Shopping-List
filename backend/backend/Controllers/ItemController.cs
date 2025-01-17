@@ -22,13 +22,12 @@ namespace API.Controllers
         {
             var items = await _itemService.GetItems();
 
-            // Check if the result is null or empty and return appropriate response
             if (items == null || !items.Any())
             {
                 return NotFound();  // Return 404 if no items found
             }
 
-            // Using ItemMapper from API.Mappers to map each Item domain model to ItemDTO model
+            // map each Item domain model to ItemDTO model
             var itemDTOs = items.Select(item => ItemMapperDomainToDTO.MapToDTO(item)).ToList();
 
             return Ok(itemDTOs); // the list of ItemDTO objects is returned with a 200 OK response            
@@ -75,7 +74,6 @@ namespace API.Controllers
 
         [HttpPut]
         [Route("editItem/{id}")]
-
         public async Task<IActionResult> EditItem(int id, [FromBody] ItemDTO itemDTO)
         {
             if (id != itemDTO.Id)

@@ -12,7 +12,7 @@ namespace Application.Services
             _shoppingListRepository = shoppingListRepository;
         }
 
-        public async Task<IEnumerable<ShoppingList>> GetShoppingLists()  // This method calls the GetShoppingLists() method of the injected repository (_shoppingListsRepository), which will fetch the list of shopping lists from the database
+        public async Task<IEnumerable<ShoppingList>> GetShoppingLists()  
         {
             return await _shoppingListRepository.GetShoppingLists();
         }
@@ -25,6 +25,16 @@ namespace Application.Services
         public async Task DeleteShoppingList(int id)
         {
             await _shoppingListRepository.DeleteShoppingList(id);
+        }
+
+        public async Task AddShoppingList(ShoppingList shoppingList)
+        {
+            await _shoppingListRepository.AddShoppingList(shoppingList);
+        }
+
+        public async Task<int> getCountOfItemInShoppingList(int itemId)
+        {
+            return await _shoppingListRepository.getCountOfItemInShoppingList(itemId);
         }
     }
 }

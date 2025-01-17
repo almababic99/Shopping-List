@@ -159,6 +159,22 @@
   },
   {
     "ContainingType": "API.Controllers.ShoppingListController",
+    "Method": "AddShoppingList",
+    "RelativePath": "api/ShoppingList/addShoppingList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shoppingListDTO",
+        "Type": "API.DTOModels.ShoppingListDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ShoppingListController",
     "Method": "DeleteShopping",
     "RelativePath": "api/ShoppingList/deleteShoppingList/{id}",
     "HttpMethod": "DELETE",

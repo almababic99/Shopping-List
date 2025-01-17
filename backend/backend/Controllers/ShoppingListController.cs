@@ -22,18 +22,16 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("shoppingLists")]
-
         public async Task<IActionResult> GetShoppingLists()
         {
             var shoppingLists = await _shoppingListService.GetShoppingLists();
 
-            // Check if the result is null or empty and return appropriate response
             if (shoppingLists == null || !shoppingLists.Any())
             {
                 return NotFound();  // Return 404 if no shopping lists found
             }
 
-            // Using ShoppingListMapper from API.Mappers to map each ShoppingList domain model to ShoppingListDTO model
+            // map each ShoppingList domain model to ShoppingListDTO model
             var shoppingListsDTOs = new List<ShoppingListDTO>();
 
             foreach (var shoppingList in shoppingLists)
@@ -47,18 +45,16 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("shoppingLists/{shopperId}")]
-
         public async Task<IActionResult> GetShoppingListsByShopperId(int shopperId)
         {
             var shoppingLists = await _shoppingListService.GetShoppingListsByShopperId(shopperId);
 
-            // Check if the result is null or empty and return appropriate response
             if (shoppingLists == null || !shoppingLists.Any())
             {
                 return NotFound();  // Return 404 if no shopping lists found
             }
 
-            // Using ShoppingListMapper from API.Mappers to map each ShoppingList domain model to ShoppingListDTO model
+            // map each ShoppingList domain model to ShoppingListDTO model
             var shoppingListsDTOs = new List<ShoppingListDTO>();
 
             foreach (var shoppingList in shoppingLists)
@@ -75,6 +71,32 @@ namespace API.Controllers
         public async Task<IActionResult> DeleteShopping(int id)
         {
             await _shoppingListService.DeleteShoppingList(id);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("addShoppingList")]
+        public async Task<IActionResult> AddShoppingList([FromBody] ShoppingListDTO shoppingListDTO)   // adding shopping list and shopping list items to database
+        {
+            if (shoppingListDTO == null || shoppingListDTO.Items == null || !shoppingListDTO.Items.Any()) 
+            { 
+                return BadRequest("Shopping list and shopping list items can't be null or empty"); 
+            }
+
+            // One item can be found in maximum of 3 shopping lists:
+            foreach (var shoppingListItem in shoppingListDTO.Items)
+            {
+                var countOfItemInShoppingList = await _shoppingListService.getCountOfItemInShoppingList(shoppingListItem.Item.Id); 
+                if (countOfItemInShoppingList >= 3)
+                {
+                    return BadRequest($"{shoppingListItem.Item.Name} is already in 3 shopping lists and one item can be found in maximum of 3 shopping lists");
+                }
+            }
+
+            var shoppingListDomain = await ShoppingListMapperDTOToDomain.MapToDomain(shoppingListDTO, _shopperService, _itemService);  // map dto to domain
+
+            await _shoppingListService.AddShoppingList(shoppingListDomain);  // passing domain to service
 
             return Ok();
         }

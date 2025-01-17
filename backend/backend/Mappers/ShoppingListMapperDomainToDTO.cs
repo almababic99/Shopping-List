@@ -6,12 +6,12 @@ namespace API.Mappers
 {
     public static class ShoppingListMapperDomainToDTO
     {
-        public static async Task<ShoppingListDTO> MapToDTO(ShoppingList shoppingList, IShopperService shopperService, IItemService itemService)
+        public static async Task<ShoppingListDTO> MapToDTO(ShoppingList shoppingList, IShopperService shopperService, IItemService itemService)  // This method maps ShoppingList domain to ShoppingListDTO
         {
             // Fetch shopper details by shopperId
             var shopper = await shopperService.GetShopperById(shoppingList.ShopperId.GetValueOrDefault());
 
-            // map shopping list to a DTO and fetch items one by one
+            // map dto shopping list to a DTO and fetch items one by one
             var shoppingListDTO = new ShoppingListDTO
             {
                 Id = shoppingList.Id,
@@ -35,7 +35,6 @@ namespace API.Mappers
                     shoppingListDTO.Items.Add(new ShoppingListItemDTO
                     {
                         Id = shoppingListItem.Id,
-                        // Quantity = shoppingListItem.Quantity,
                         Item = new ItemDTO
                         {
                             Id = itemDetails.Id,

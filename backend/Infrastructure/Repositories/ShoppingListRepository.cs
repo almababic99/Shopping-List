@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Domain.DomainModels;
 using Infrastructure.Data;
+using Infrastructure.EntityModels;
 using Infrastructure.Mappers;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,5 +45,43 @@ namespace Infrastructure.Repositories
                 await _shoppingListDbContext.SaveChangesAsync();
             }
         }
+
+        public async Task AddShoppingList(ShoppingList shoppingList)  // add shopping list and shopping list items to database
+        {
+            var shoppingListEntity = ShoppingListMapperDomainToEntity.MapToEntity(shoppingList);  // mapping domain to entity
+
+            await _shoppingListDbContext.ShoppingLists.AddAsync(shoppingListEntity);  // adding entity to DbContext
+
+            await _shoppingListDbContext.SaveChangesAsync();   // saving changes to database
+
+            foreach (var item in shoppingList.Items)
+            {
+                // Check if item already exists in the shopping list before adding
+                var existingItem = await _shoppingListDbContext.ShoppingListItems
+                    .FirstOrDefaultAsync(s => s.ShoppingListId == shoppingListEntity.Id && s.ItemId == item.ItemId);
+
+                if (existingItem == null)
+                {
+                    // Map shopping list items domain models to shopping list items entities models
+                    var shoppingListItemEntity = new ShoppingListItemEntity
+                    {
+                        ShoppingListId = shoppingListEntity.Id,
+                        ItemId = item.ItemId
+                    };
+
+                    // Add the ShoppingListItem to the database
+                    await _shoppingListDbContext.ShoppingListItems.AddAsync(shoppingListItemEntity);
+                }
+            }
+
+            await _shoppingListDbContext.SaveChangesAsync();    // saving shopping list items to database
+        }
+
+        public async Task<int> getCountOfItemInShoppingList(int itemId)   // count the number of item in shopping list items  (One item can be found in maximum of 3 shopping lists)
+        {
+            return await _shoppingListDbContext.ShoppingListItems
+                .Where(s => s.ItemId == itemId)   // Filter by ItemId
+                .CountAsync();    // Count the number of items with itemId as ItemId
+        } 
     }
 }

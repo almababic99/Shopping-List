@@ -5,7 +5,7 @@ namespace API.Mappers
 {
     public static class ItemMapperDTOToDomain
     {
-        public static Item MapToDomain(ItemDTO itemDTO)  // This method maps ItemDTO to domain model
+        public static Item MapToDomain(ItemDTO itemDTO)  // This method maps ItemDTO to Item domain model
         {
             return new Item
             {

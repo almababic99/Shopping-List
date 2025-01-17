@@ -5,7 +5,7 @@ namespace Infrastructure.Mappers
 {
     public static class ItemMapperEntityToDomain
     {
-        public static Item MapToDomain(ItemEntity item)  // This method maps Item entity model to Domain model
+        public static Item MapToDomain(ItemEntity item)  // This method maps ItemEntity model to Item domain model
         {
             return new Item
             {

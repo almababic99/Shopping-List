@@ -324,6 +324,37 @@
           }
         }
       }
+    },
+    "/api/ShoppingList/addShoppingList": {
+      "post": {
+        "tags": [
+          "ShoppingList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShoppingListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShoppingListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShoppingListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -338,13 +369,6 @@
           "name": {
             "type": "string",
             "nullable": true
-          },
-          "shoppingLists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ShoppingListItemDTO"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -358,6 +382,26 @@
           },
           "name": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShoppingListDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shopper": {
+            "$ref": "#/components/schemas/ShopperDTO"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShoppingListItemDTO"
+            },
             "nullable": true
           }
         },

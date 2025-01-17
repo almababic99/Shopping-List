@@ -6,7 +6,7 @@ namespace Infrastructure.EntityModels
     {
         public int Id { get; set; }
         public int ShoppingListId { get; set; }  // Foreign key to ShoppingList
-        public required ShoppingListEntity ShoppingList { get; set; }  // Navigation property
+        public ShoppingListEntity? ShoppingList { get; set; }  // Navigation property
         public int ItemId { get; set; }  // Foreign key to Item
         public ItemEntity? Item { get; set; }  // Navigation property
     }

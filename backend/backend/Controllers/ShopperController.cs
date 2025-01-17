@@ -2,7 +2,6 @@
 using Application.Interfaces;
 using API.Mappers;
 using API.DTOModels;
-using Application.Services;
 
 namespace API.Controllers
 {
@@ -24,13 +23,12 @@ namespace API.Controllers
         {
             var shoppers = await _shopperService.GetShoppers();
 
-            // Check if the result is null or empty and return appropriate response
             if (shoppers == null || !shoppers.Any())
             {
                 return NotFound();  // Return 404 if no shoppers found
             }
 
-            // Using ShopperMapper from API.Mappers to map each Shopper domain model to ShopperDTO model
+            // map each Shopper domain model to ShopperDTO model
             var shopperDTOs = shoppers.Select(shopper => ShopperMapperDomainToDTO.MapToDTO(shopper)).ToList();
 
             return Ok(shopperDTOs); // the list of ShopperDTO objects is returned with a 200 OK response            

@@ -1,5 +1,6 @@
 ﻿using API.DTOModels;
 using API.Mappers;
+using Application.Commands;
 using Application.Interfaces;
 using Application.Queries;
 using MediatR;
@@ -46,13 +47,9 @@ namespace API.Controllers
         public async Task<IActionResult> AddItem([FromBody] ItemDTO itemDTO)
         {
             if (itemDTO == null)
-            {
                 return BadRequest("Item data is null");
-            }
 
-            var item = ItemMapperDTOToDomain.MapToDomain(itemDTO);  // mapping dto to domain and passing it to service
-
-            await _itemService.AddItem(item);   // passing domain to service
+            await _mediator.Send(new CreateItemCommand { Id = itemDTO.Id, Name = itemDTO.Name });
 
             return Ok();  
         }

@@ -4,7 +4,7 @@ using Infrastructure.Repositories;
 using Application.Services;
 using Application.Interfaces;
 using Application.Queries;
-using Microsoft.Extensions.DependencyInjection;
+using Application.Commands;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +23,8 @@ builder.Services.AddMediatR(cf => cf.RegisterServicesFromAssemblies(
     typeof(GetItemsQueryHandler).Assembly,
     typeof(GetItemByIdQueryHandler).Assembly,
     typeof(GetShoppingListsQueryHandler).Assembly,
-    typeof(GetShoppingListsByShopperIdQueryHandler).Assembly
+    typeof(GetShoppingListsByShopperIdQueryHandler).Assembly,
+    typeof(CreateItemCommandHandler).Assembly
 ));
 
 builder.Services.AddControllers();

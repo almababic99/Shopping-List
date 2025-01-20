@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YiM3SYswgXo=",
+  "dgSpecHash": "FCaPWBmiGaE=",
   "success": true,
   "projectFilePath": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\alma.babic\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\alma.babic\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\alma.babic\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

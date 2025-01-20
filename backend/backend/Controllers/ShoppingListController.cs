@@ -1,6 +1,8 @@
 ﻿using API.DTOModels;
 using API.Mappers;
 using Application.Interfaces;
+using Application.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -12,24 +14,21 @@ namespace API.Controllers
         private readonly IShoppingListService _shoppingListService;
         private readonly IShopperService _shopperService;
         private readonly IItemService _itemService;
+        private readonly IMediator _mediator;
 
-        public ShoppingListController(IShoppingListService shoppingListService, IShopperService shopperService, IItemService itemService)  // Constructor for Dependency Injection 
+        public ShoppingListController(IShoppingListService shoppingListService, IShopperService shopperService, IItemService itemService, IMediator mediator)  // Constructor for Dependency Injection 
         {
             _shoppingListService = shoppingListService;
             _shopperService = shopperService;
             _itemService = itemService;
+            _mediator = mediator;
         }
 
         [HttpGet]
         [Route("shoppingLists")]
         public async Task<IActionResult> GetShoppingLists()
         {
-            var shoppingLists = await _shoppingListService.GetShoppingLists();
-
-            if (shoppingLists == null || !shoppingLists.Any())
-            {
-                return NotFound();  // Return 404 if no shopping lists found
-            }
+            var shoppingLists = await _mediator.Send(new GetShoppingListsQuery());
 
             // map each ShoppingList domain model to ShoppingListDTO model
             var shoppingListsDTOs = new List<ShoppingListDTO>();
@@ -47,12 +46,8 @@ namespace API.Controllers
         [Route("shoppingLists/{shopperId}")]
         public async Task<IActionResult> GetShoppingListsByShopperId(int shopperId)
         {
-            var shoppingLists = await _shoppingListService.GetShoppingListsByShopperId(shopperId);
-
-            if (shoppingLists == null || !shoppingLists.Any())
-            {
-                return NotFound();  // Return 404 if no shopping lists found
-            }
+            var shoppingLists = await _mediator.Send(new GetShoppingListsByShopperIdQuery { ShopperId = shopperId });  
+            // using MediatR to send a query (GetShoppingListsByShopperIdQuery) with ShopperId = shopperId to a query handler and it waits asynchronously for the result
 
             // map each ShoppingList domain model to ShoppingListDTO model
             var shoppingListsDTOs = new List<ShoppingListDTO>();

@@ -3,6 +3,8 @@ using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Application.Services;
 using Application.Interfaces;
+using Application.Queries;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,15 @@ builder.Services.AddScoped<IItemRepository, ItemRepository>();        // This re
 builder.Services.AddScoped<IItemService, ItemService>();              // This registers the ItemService as a scoped service that implements the IItemService interface.
 builder.Services.AddScoped<IShoppingListRepository, ShoppingListRepository>();   // This registers the ShoppingListRepository as a scoped service that implements the IShoppingListRepository interface.
 builder.Services.AddScoped<IShoppingListService, ShoppingListService>();         // This registers the ShoppingListService as a scoped service that implements the IShoppingListService interface.
+
+builder.Services.AddMediatR(cf => cf.RegisterServicesFromAssemblies(
+    typeof(GetShoppersQueryHandler).Assembly,
+    typeof(GetShopperByIdQueryHandler).Assembly,
+    typeof(GetItemsQueryHandler).Assembly,
+    typeof(GetItemByIdQueryHandler).Assembly,
+    typeof(GetShoppingListsQueryHandler).Assembly,
+    typeof(GetShoppingListsByShopperIdQueryHandler).Assembly
+));
 
 builder.Services.AddControllers();
 

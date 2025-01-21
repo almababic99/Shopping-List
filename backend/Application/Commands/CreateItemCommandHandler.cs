@@ -15,7 +15,7 @@ namespace Application.Commands
 
         public async Task Handle(CreateItemCommand request, CancellationToken cancellationToken)
         {
-            var item = new Item { Id = request.Id, Name = request.Name };
+            var item = new Item { Id = request.Id, Name = request.Name };  // mapping dto to domain
 
             await _itemRepository.AddItem(item).ConfigureAwait(false);
         }

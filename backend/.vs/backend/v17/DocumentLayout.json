@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\commands\\createshoppercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\commands\\createshoppercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\commands\\createshoppercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\commands\\createshoppercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\controllers\\shoppercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\controllers\\shoppercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\commands\\createitemcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\commands\\createitemcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\application\\commands\\createitemcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{532827A2-5C57-46DA-A0E6-5EA3B4B14F7D}|Application\\Application.csproj|solutionrelative:application\\commands\\createitemcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B262822-8436-43D9-A566-AA3AF16B91B5}|backend\\API.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|c:\\users\\alma.babic\\desktop\\projects\\shopping-list\\backend\\infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639F40A8-86C6-4A65-BBA1-70EC24B5ADA9}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ItemRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ItemRepository.cs",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Infrastructure\\Repositories\\ItemRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\ItemRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAArwCoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CreateShopperCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateShopperCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\CreateShopperCommandHandler.cs",
+              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateShopperCommandHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\CreateShopperCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T15:21:34.45Z",
+              "WhenOpened": "2025-01-21T08:56:01.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "CreateShopperCommand.cs",
+              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateShopperCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\CreateShopperCommand.cs",
+              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateShopperCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\CreateShopperCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T08:55:44.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopperController.cs",
+              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ShopperController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\ShopperController.cs",
+              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ShopperController.cs",
+              "RelativeToolTip": "backend\\Controllers\\ShopperController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T08:55:26.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\ItemController.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Controllers\\ItemController.cs",
               "RelativeToolTip": "backend\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA1wDUAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T15:13:01.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateItemCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateItemCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commands\\CreateItemCommandHandler.cs",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateItemCommandHandler.cs",
-              "RelativeToolTip": "Application\\Commands\\CreateItemCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T15:12:44.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "backend\\Program.cs",
               "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\backend\\Program.cs",
               "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvxsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T11:30:27.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateItemCommand.cs",
-              "DocumentMoniker": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateItemCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Commands\\CreateItemCommand.cs",
-              "ToolTip": "C:\\Users\\alma.babic\\Desktop\\Projects\\Shopping-List\\backend\\Application\\Commands\\CreateItemCommand.cs",
-              "RelativeToolTip": "Application\\Commands\\CreateItemCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T15:12:25.917Z",
               "EditorCaption": ""
             }
           ]

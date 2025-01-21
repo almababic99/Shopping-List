@@ -4,6 +4,7 @@ using API.Mappers;
 using API.DTOModels;
 using MediatR;
 using Application.Queries;
+using Application.Commands;
 
 namespace API.Controllers
 {
@@ -47,13 +48,9 @@ namespace API.Controllers
         public async Task<IActionResult> AddShopper([FromBody] ShopperDTO shopperDTO)
         {
             if (shopperDTO == null)
-            {
                 return BadRequest("Shopper data is null");
-            }
 
-            var shopper = ShopperMapperDTOToDomain.MapToDomain(shopperDTO);  // mapping dto to domain and passing it to service
-
-            await _shopperService.AddShopper(shopper);   // passing domain to service
+            await _mediator.Send(new CreateShopperCommand { Id = shopperDTO.Id, Name = shopperDTO.Name });
 
             return Ok();
         }

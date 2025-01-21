@@ -24,7 +24,8 @@ builder.Services.AddMediatR(cf => cf.RegisterServicesFromAssemblies(
     typeof(GetItemByIdQueryHandler).Assembly,
     typeof(GetShoppingListsQueryHandler).Assembly,
     typeof(GetShoppingListsByShopperIdQueryHandler).Assembly,
-    typeof(CreateItemCommandHandler).Assembly
+    typeof(CreateItemCommandHandler).Assembly,
+    typeof(CreateShopperCommandHandler).Assembly
 ));
 
 builder.Services.AddControllers();

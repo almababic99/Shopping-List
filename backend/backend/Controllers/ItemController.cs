@@ -58,8 +58,8 @@ namespace API.Controllers
         [Route("deleteItem/{id}")]
         public async Task<IActionResult> DeleteItem(int id)
         {
-            await _itemService.DeleteItem(id);
-            
+            await _mediator.Send(new DeleteItemCommand { Id = id });
+
             return Ok();
         }
 

@@ -74,9 +74,7 @@ namespace API.Controllers
                 return BadRequest();
             }
 
-            var shopper = ShopperMapperDTOToDomain.MapToDomain(shopperDTO);  // mapping dto to domain and passing it to service
-
-            await _shopperService.EditShopper(shopper);  // passing domain to service
+            await _mediator.Send(new UpdateShopperCommand { Id = id, Name = shopperDTO.Name });
 
             return Ok();
         }

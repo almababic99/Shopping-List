@@ -72,9 +72,7 @@ namespace API.Controllers
                 return BadRequest();
             }
 
-            var item = ItemMapperDTOToDomain.MapToDomain(itemDTO);  // mapping dto to domain and passing it to service
-
-            await _itemService.EditItem(item);  // passing domain to service
+            await _mediator.Send(new UpdateItemCommand { Id = id, Name = itemDTO.Name });
 
             return Ok();
         }

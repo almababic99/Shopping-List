@@ -59,7 +59,7 @@ namespace API.Controllers
         [Route("deleteShopper/{id}")]
         public async Task<IActionResult> DeleteShopper(int id)
         {
-            await _shopperService.DeleteShopper(id);
+            await _mediator.Send(new DeleteShopperCommand { Id = id });
 
             return Ok();
         }

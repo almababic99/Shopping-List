@@ -17,6 +17,13 @@ namespace Application.Commands
         {
             var shopper = new Shopper { Id = request.Id, Name = request.Name };   // mapping dto to domain
 
+            var existingShopper = await _shopperRepository.GetShopper(shopper.Name);
+
+            if (existingShopper != null)
+            {
+                throw new InvalidOperationException("Shopper with the same name already exists");  // if the name already exists it throws an error
+            }
+
             await _shopperRepository.AddShopper(shopper);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using API.DTOModels;
 using API.Mappers;
+using Application.Commands;
 using Application.Interfaces;
 using Application.Queries;
 using MediatR;
@@ -61,15 +62,6 @@ namespace API.Controllers
             return Ok(shoppingListsDTOs); // the list of ShoppingListsDTO objects is returned with a 200 OK response    
         }
 
-        [HttpDelete]
-        [Route("deleteShoppingList/{id}")]
-        public async Task<IActionResult> DeleteShopping(int id)
-        {
-            await _shoppingListService.DeleteShoppingList(id);
-
-            return Ok();
-        }
-
         [HttpPost]
         [Route("addShoppingList")]
         public async Task<IActionResult> AddShoppingList([FromBody] ShoppingListDTO shoppingListDTO)   // adding shopping list and shopping list items to database
@@ -79,19 +71,25 @@ namespace API.Controllers
                 return BadRequest("Shopping list and shopping list items can't be null or empty"); 
             }
 
-            // One item can be found in maximum of 3 shopping lists:
-            foreach (var shoppingListItem in shoppingListDTO.Items)
-            {
-                var countOfItemInShoppingList = await _shoppingListService.getCountOfItemInShoppingList(shoppingListItem.Item.Id); 
-                if (countOfItemInShoppingList >= 3)
-                {
-                    return BadRequest($"{shoppingListItem.Item.Name} is already in 3 shopping lists and one item can be found in maximum of 3 shopping lists");
-                }
-            }
-
             var shoppingListDomain = await ShoppingListMapperDTOToDomain.MapToDomain(shoppingListDTO, _shopperService, _itemService);  // map dto to domain
 
-            await _shoppingListService.AddShoppingList(shoppingListDomain);  // passing domain to service
+            var shoppingList = new CreateShoppingListCommand   // passing domain values to CreateShoppingListCommand
+            {
+                Id = shoppingListDomain.Id,
+                ShopperId = shoppingListDomain.ShopperId,
+                Items = shoppingListDomain.Items
+            };
+
+            await _mediator.Send(shoppingList);  
+
+            return Ok();
+        }
+
+        [HttpDelete]
+        [Route("deleteShoppingList/{id}")]
+        public async Task<IActionResult> DeleteShopping(int id)
+        {
+            await _shoppingListService.DeleteShoppingList(id);
 
             return Ok();
         }
